@@ -1,0 +1,29 @@
+name: Publish
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    publish:
+        runs-on: [ubuntu-latest]
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '13.x'
+
+            - name: installing dependencies
+              run: npm ci
+
+            - name: semantic release
+              run: npm run semantic-release
+              env:
+                  CI: true
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
