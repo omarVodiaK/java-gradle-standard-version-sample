@@ -1,5 +1,7 @@
 # Java Gradle Standard Version Sample
 
+Some meaninless update
+
 This simple module demos how to use Conventional Commits, Git Hooks to enforce Conventional Commits and Semantic Versioning in a Java project built with Gradle.
 
 This is the companion project to the article [Supercharge your Java Projects with Conventional Commits, Semantic Versioning and Semantic Releases](https://dwmkerr.com/conventional-commits-and-semantic-versioning-for-java/).
@@ -18,9 +20,9 @@ This will make sure your commit messages follow the [Conventional Commits Specif
 
 Here's some handly commands:
 
-| Command | Usage |
-|---------|-------|
-| `./mvnw -B verify` | Run the tests. |
+| Command             | Usage           |
+| ------------------- | --------------- |
+| `./mvnw -B verify`  | Run the tests.  |
 | `./mvnw -B package` | Run the builds. |
 
 ## Semantic Versioning
@@ -41,9 +43,9 @@ npx dwmkerr/standard-version --packageFiles pom.xml --bumpFiles pom.xml
 
 This will:
 
-- Update the `CHANGELOG.md`
-- Update the version number based on the commit history
-- Create a git tag with the new version number
+-   Update the `CHANGELOG.md`
+-   Update the version number based on the commit history
+-   Create a git tag with the new version number
 
 Finally, just push the tag to trigger a deployment of the new version:
 
