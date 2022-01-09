@@ -15,13 +15,13 @@ jobs:
             - name: Setup node
               uses: actions/setup-node@v1
               with:
-                  node-version: '13.x'
+                  node-version: '14.x'
 
             - name: installing dependencies
-              run: npm install
+              run: yarn install
 
             - name: semantic release
-              run: npm run semantic-release
+              run: yarn run semantic-release
               env:
                   CI: true
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
