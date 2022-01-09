@@ -18,7 +18,7 @@ jobs:
                   node-version: '13.x'
 
             - name: installing dependencies
-              run: npm ci
+              run: npm install
 
             - name: semantic release
               run: npm run semantic-release
