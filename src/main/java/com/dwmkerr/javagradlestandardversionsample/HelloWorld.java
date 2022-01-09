@@ -5,9 +5,6 @@ package com.dwmkerr.javagradlestandardversionsample;
  */
 public class HelloWorld {
     public String Hello() {
-
         return "Hello, World!";
-        
-
     }
 }
